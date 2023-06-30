@@ -1,0 +1,12 @@
+<h3>Login</h3>
+
+<form #dataForm="ngForm" (ngSubmit)="sendLogin(dataForm.value)">
+
+    Correo electrónico <input ngModel  name="email"> <br>
+    Contraseña <input type=password ngModel  name="password"> <br>
+    
+    <button>Login</button>
+</form>
+
+<b *ngIf="loginError" > Credenciales invalidas </b>
+

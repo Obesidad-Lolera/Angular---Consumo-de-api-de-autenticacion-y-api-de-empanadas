@@ -1,0 +1,14 @@
+<h1>EmpanadApp!!!!</h1>
+
+<ul>
+  <li>
+    <a routerLink="/">Inicio</a>
+  </li>
+  <li *ngIf="!status.isLoggedIn">
+    <a routerLink="/login">Login</a>
+  </li>
+ 
+  <li *ngIf="status.isLoggedIn">
+    <a routerLink="/#" (click)="logout()">Cerrar Sesión</a>
+  </li>
+</ul>
