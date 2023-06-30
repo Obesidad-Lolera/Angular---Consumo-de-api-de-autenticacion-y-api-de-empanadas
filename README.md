@@ -45,7 +45,7 @@ import {inject} from '@angular/core';
 
 
 export const autenticacionGuard: CanActivateFn = (route, state) => {
-  if (localStorage.getItem("accessToken") === null && localStorage.getItem("userName") === null ) {
+  if (localStorage.getItem("accessToken") === null ) {
     const router = inject(Router);
     router.navigate(["/login"]);
     return false;
@@ -109,7 +109,6 @@ El archivo `src/services/auth.service.ts` debe quedar con el siguiente contenido
 ```typescript
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
 
 
 
